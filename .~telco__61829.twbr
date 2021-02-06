@@ -4,13 +4,16 @@
 <workbook source-build='2020.3.5 (20203.21.0110.1657)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.ExplainDataUserSteering.true...ExplainDataUserSteering />
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <_.fcp.SetMembershipControl.true...SetMembershipControl />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
@@ -237,7 +240,7 @@
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
             <attributes>
-              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='integer' name='context'>0</attribute>
               <attribute datatype='string' name='gridOrigin'>&quot;A1:D3:no:A1:D3:0&quot;</attribute>
               <attribute datatype='boolean' name='header'>true</attribute>
               <attribute datatype='integer' name='outcome'>6</attribute>
@@ -962,7 +965,11 @@
       <column caption='Total Charges' datatype='real' name='[total_charges]' role='measure' type='quantitative' />
       <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
       <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
-      <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal' />
+      <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+        </aliases>
+      </column>
       <column-instance column='[__tableau_internal_object_id__].[Sheet2_48D0715395A24894B2B8B8954BF3BE92]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Sheet2_48D0715395A24894B2B8B8954BF3BE92:qk]' pivot='key' type='quantitative' />
       <column-instance column='[__tableau_internal_object_id__].[_EFC19F7D110C42B98E51C7C4A2060717]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:_EFC19F7D110C42B98E51C7C4A2060717:qk]' pivot='key' type='quantitative' />
       <column-instance column='[__tableau_internal_object_id__].[mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4:qk]' pivot='key' type='quantitative' />
@@ -1114,6 +1121,53 @@
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
+      <_.fcp.ExplainDataUserSteering.true...explainability>
+        <explainability-field name='[4. Validation]' used='true' />
+        <explainability-field name='[Calculation_4196369698187001856]' used='false' />
+        <explainability-field name='[DeviceProtection]' used='true' />
+        <explainability-field name='[F1]' used='true' />
+        <explainability-field name='[OnlineBackup]' used='true' />
+        <explainability-field name='[OnlineSecurity]' used='true' />
+        <explainability-field name='[PaperlessBilling]' used='true' />
+        <explainability-field name='[PaymentMethod]' used='true' />
+        <explainability-field name='[Pivot Field Names (Pivot1)]' used='true' />
+        <explainability-field name='[Pivot Field Names]' used='true' />
+        <explainability-field name='[Pivot Field Values (Pivot1)]' used='true' />
+        <explainability-field name='[Pivot Field Values]' used='true' />
+        <explainability-field name='[Sheet]' used='true' />
+        <explainability-field name='[Start_Date]' used='true' />
+        <explainability-field name='[StreamingMovies]' used='true' />
+        <explainability-field name='[StreamingTV]' used='true' />
+        <explainability-field name='[Table Name]' used='true' />
+        <explainability-field name='[TechSupport]' used='true' />
+        <explainability-field name='[Tenure (mo)]' used='true' />
+        <explainability-field name='[average_monthly_charges]' used='true' />
+        <explainability-field name='[binned_tenure]' used='true' />
+        <explainability-field name='[churn]' used='true' />
+        <explainability-field name='[contract_type]' used='true' />
+        <explainability-field name='[customer_id]' used='false' />
+        <explainability-field name='[dependents]' used='true' />
+        <explainability-field name='[full_months_of_tenure (Sheet2)]' used='true' />
+        <explainability-field name='[full_months_of_tenure]' used='true' />
+        <explainability-field name='[gender]' used='true' />
+        <explainability-field name='[has_churned]' used='true' />
+        <explainability-field name='[has_internet]' used='true' />
+        <explainability-field name='[has_phone]' used='true' />
+        <explainability-field name='[has_phone_and_internet]' used='true' />
+        <explainability-field name='[internet_service]' used='true' />
+        <explainability-field name='[is_female]' used='true' />
+        <explainability-field name='[is_senior_citizen]' used='true' />
+        <explainability-field name='[monthly_charges]' used='true' />
+        <explainability-field name='[partner]' used='true' />
+        <explainability-field name='[partner_dependents]' used='true' />
+        <explainability-field name='[payment_type]' used='true' />
+        <explainability-field name='[phone_service]' used='true' />
+        <explainability-field name='[serv_type]' used='true' />
+        <explainability-field name='[total_charges]' used='true' />
+        <explainability-field name='[type_of_contract]' used='true' />
+        <explainability-field name='[type_of_internet_serv]' used='true' />
+        <explainability-field name='[type_of_phone_serv]' used='true' />
+      </_.fcp.ExplainDataUserSteering.true...explainability>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
           <object caption='Sheet2' id='Sheet2_48D0715395A24894B2B8B8954BF3BE92'>
@@ -1272,7 +1326,11 @@
             </column-instance>
             <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
             <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
-            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal' />
+            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+              </aliases>
+            </column>
           </datasource-dependencies>
           <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]'>
             <groupfilter function='member' level='[none:has_churned:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
@@ -1292,7 +1350,143 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]' field-type='quantitative' major-origin='0' major-spacing='6' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]' field-type='quantitative' major-origin='0' major-spacing='6' max='75' min='0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='rounding' id='annotation_2' value='medium' />
+            <format attr='rounding' id='annotation_3' value='medium' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.1546962261199951' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</rows>
+        <cols>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]</cols>
+        <percentages enabled='true' mode='table' />
+        <annotations>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='308'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#901363' fontname='Futura'>Accounts for 30% of all Month-to-Month attrition.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='1.0355212355212355'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.056879579752507257'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='196' y='27' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='0' text-width='313'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#603888' fontname='Futura'>Accounts for 40% of all Month-to-Month attrition.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='1.2764478764478762'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.14936156312788018'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='195' y='44' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{0FFF416B-86DE-4075-B45F-CD63EFA97531}' />
+    </worksheet>
+    <worksheet name='Current Month to Month Fiber Customer Churn (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mytable_values_only+ (telco_valuesonly)' name='federated.081vzbf18fnfqb1eqhjmd17kv5rf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.081vzbf18fnfqb1eqhjmd17kv5rf'>
+            <column caption='Full Months Of Tenure' datatype='integer' name='[full_months_of_tenure]' role='measure' type='quantitative' />
+            <column caption='Has Churned' datatype='boolean' name='[has_churned]' role='dimension' type='nominal' />
+            <column-instance column='[full_months_of_tenure]' derivation='None' name='[none:full_months_of_tenure:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[full_months_of_tenure]' derivation='None' name='[none:full_months_of_tenure:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[has_churned]' derivation='None' name='[none:has_churned:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_contract]' derivation='None' name='[none:type_of_contract:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_internet_serv]' derivation='None' name='[none:type_of_internet_serv:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_phone_serv]' derivation='None' name='[none:type_of_phone_serv:nk]' pivot='key' type='nominal' />
+            <column-instance column='[has_churned]' derivation='Count' name='[pcto:cnt:has_churned:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Field' type='PctTotal'>
+                <order field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]' />
+                <order field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[has_churned]' derivation='Count' name='[pcto:cnt:has_churned:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Table' type='PctTotal' />
+            </column-instance>
+            <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
+            <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
+            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]'>
+            <groupfilter function='member' level='[none:has_churned:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_contract:nk]'>
+            <groupfilter function='member' level='[none:type_of_contract:nk]' member='&quot;Month-to-Month&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]'>
+            <groupfilter function='member' level='[none:type_of_internet_serv:nk]' member='&quot;Fiber Optic&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]</column>
+            <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_contract:nk]</column>
+            <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]' field-type='quantitative' major-origin='0' major-spacing='6' max='75' min='0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='rounding' id='annotation_2' value='medium' />
+            <format attr='rounding' id='annotation_3' value='medium' />
           </style-rule>
         </style>
         <panes>
@@ -1302,15 +1496,59 @@
             </view>
             <mark class='Automatic' />
             <encodings>
-              <color column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' />
+              <text column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk:2]' />
             </encodings>
           </pane>
         </panes>
-        <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</rows>
-        <cols>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]</cols>
+        <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]</rows>
+        <cols>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:ok]</cols>
         <percentages enabled='true' mode='table' />
+        <annotations>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='308'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#901363' fontname='Futura'>Accounts for 30% of all Month-to-Month attrition.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='1.0355212355212355'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.056879579752507257'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='196' y='27' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='0' text-width='313'>
+            <formatted-text>
+              <run fontalignment='0' fontcolor='#603888' fontname='Futura'>Accounts for 40% of all Month-to-Month attrition.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='1.2764478764478762'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:full_months_of_tenure:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.14936156312788018'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='195' y='44' />
+          </annotation>
+        </annotations>
       </table>
-      <simple-id uuid='{0FFF416B-86DE-4075-B45F-CD63EFA97531}' />
+      <simple-id uuid='{0AA468B9-F23D-420C-981C-453D78C201C6}' />
     </worksheet>
     <worksheet name='Current vs Predicted'>
       <table>
@@ -1395,6 +1633,13 @@
       <simple-id uuid='{7B895E13-2041-46B7-849F-E9097771D8F9}' />
     </worksheet>
     <worksheet name='Current vs Predicted (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>29% Total Decrease in Churn of Month-to-Month Fiber Customers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -1422,6 +1667,13 @@
               </groupfilter>
             </groupfilter>
           </filter>
+          <manual-sort column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Fiber Multi-Line&quot;</bucket>
+              <bucket>&quot;Fiber One Line&quot;</bucket>
+              <bucket>&quot;Fiber&quot;</bucket>
+            </dictionary>
+          </manual-sort>
           <slices>
             <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[Exclusions (F1,Pivot Field Names (Pivot1))]</column>
           </slices>
@@ -1429,13 +1681,18 @@
         </view>
         <style>
           <style-rule element='cell'>
-            <format attr='width' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]' value='76' />
+            <format attr='width' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]' value='139' />
           </style-rule>
           <style-rule element='label'>
             <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]' value='false' />
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]' value='true' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
           </style-rule>
         </style>
         <panes>
@@ -1454,7 +1711,11 @@
             </encodings>
             <style>
               <style-rule element='mark'>
-                <format attr='size' value='11.271908760070801' />
+                <format attr='size' value='10.547307014465332' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-markers-mode' value='all' />
               </style-rule>
               <style-rule element='pane'>
                 <format attr='minwidth' value='-1' />
@@ -1465,6 +1726,72 @@
         </panes>
         <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</rows>
         <cols>([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk] / [federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk])</cols>
+        <percentages enabled='false' mode='row-in-pane' />
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='100'>
+            <formatted-text>
+              <run bold='true' fontname='Futura' fontsize='12'>58% drop</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.527094'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Sheet3&quot;</bucket>
+                      <bucket>&quot;Fiber Multi-Line&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='275.16101694915255'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='59' y='72' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='101'>
+            <formatted-text>
+              <run bold='true' fontname='Futura' fontsize='12'>33% drop</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]</field>
+                        <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:F1:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Predicted total churn&quot;</value>
+                    <value>&quot;Fiber One Line&quot;</value>
+                    <value>&quot;Sheet3&quot;</value>
+                    <value>333</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='120' y='13' />
+          </annotation>
+        </annotations>
       </table>
       <simple-id uuid='{ECCCF38A-A34B-4E7B-B156-52F81EC37F5B}' />
     </worksheet>
@@ -1545,6 +1872,312 @@
         <cols>([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk] / [federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk])</cols>
       </table>
       <simple-id uuid='{330C95B5-B475-4C28-8282-1BB253ED2F8A}' />
+    </worksheet>
+    <worksheet name='Current vs Predicted (4)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>29% Total Decrease in Churn of Month-to-Month Fiber Customers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mytable_values_only+ (telco_valuesonly)' name='federated.081vzbf18fnfqb1eqhjmd17kv5rf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.081vzbf18fnfqb1eqhjmd17kv5rf'>
+            <column datatype='string' name='[F1]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Pivot Field Names (Pivot1)]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Pivot Field Values (Pivot1)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sheet]' role='dimension' type='nominal' />
+            <column-instance column='[F1]' derivation='None' name='[none:F1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Names (Pivot1)]' derivation='None' name='[none:Pivot Field Names (Pivot1):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sheet]' derivation='None' name='[none:Sheet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Pivot Field Values (Pivot1)]' derivation='Sum' name='[sum:Pivot Field Values (Pivot1):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[Exclusions (F1,Pivot Field Names (Pivot1))]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:F1:nk]' />
+                <groupfilter function='level-members' level='[none:Pivot Field Names (Pivot1):nk]' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:F1:nk]' member='&quot;Current total churn&quot;' />
+                <groupfilter function='member' level='[none:Pivot Field Names (Pivot1):nk]' member='&quot;Fiber&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Fiber Multi-Line&quot;</bucket>
+              <bucket>&quot;Fiber One Line&quot;</bucket>
+              <bucket>&quot;Fiber&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[Exclusions (F1,Pivot Field Names (Pivot1))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]' value='false' />
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]' value='true' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:F1:nk]</rows>
+        <cols>([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk] / [federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk])</cols>
+        <percentages enabled='false' mode='row-in-pane' />
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='100'>
+            <formatted-text>
+              <run bold='true' fontname='Futura' fontsize='12'>58% drop</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.527094'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Sheet3&quot;</bucket>
+                      <bucket>&quot;Fiber Multi-Line&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='275.16101694915255'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='59' y='72' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='101'>
+            <formatted-text>
+              <run bold='true' fontname='Futura' fontsize='12'>33% drop</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]</field>
+                        <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:F1:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Pivot Field Names (Pivot1):nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:Sheet:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Pivot Field Values (Pivot1):qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;Predicted total churn&quot;</value>
+                    <value>&quot;Fiber One Line&quot;</value>
+                    <value>&quot;Sheet3&quot;</value>
+                    <value>333</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='120' y='13' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{1FD9FE3A-B131-43B8-BFDA-6B3FE5DF6D92}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mytable_values_only+ (telco_valuesonly)' name='federated.081vzbf18fnfqb1eqhjmd17kv5rf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.081vzbf18fnfqb1eqhjmd17kv5rf'>
+            <column datatype='boolean' name='[4. Validation]' role='dimension' type='nominal' />
+            <column caption='Device Protection' datatype='string' name='[DeviceProtection]' role='dimension' type='nominal' />
+            <column caption='Online Backup' datatype='string' name='[OnlineBackup]' role='dimension' type='nominal' />
+            <column caption='Online Security' datatype='string' name='[OnlineSecurity]' role='dimension' type='nominal' />
+            <column caption='Paperless Billing' datatype='string' name='[PaperlessBilling]' role='dimension' type='nominal' />
+            <column caption='Payment Method' datatype='string' name='[PaymentMethod]' role='dimension' type='nominal' />
+            <column caption='Start Date' datatype='integer' name='[Start_Date]' role='measure' type='quantitative' />
+            <column caption='Streaming Movies' datatype='string' name='[StreamingMovies]' role='dimension' type='nominal' />
+            <column caption='Streaming TV' datatype='string' name='[StreamingTV]' role='dimension' type='nominal' />
+            <column caption='Tech Support' datatype='string' name='[TechSupport]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Tenure (mo)]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='mytable_values_only' datatype='integer' name='[__tableau_internal_object_id__].[mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='mytable_values_only' datatype='table' name='[__tableau_internal_object_id__].[mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4]' role='measure' type='quantitative' />
+            <column caption='Average Monthly Charges' datatype='real' name='[average_monthly_charges]' role='measure' type='quantitative' />
+            <column caption='Binned Tenure' datatype='string' name='[binned_tenure]' role='dimension' type='nominal' />
+            <column caption='Churn' datatype='string' name='[churn]' role='dimension' type='nominal' />
+            <column caption='Contract Type' datatype='integer' name='[contract_type]' role='measure' type='quantitative' />
+            <column caption='Customer Id' datatype='string' name='[customer_id]' role='dimension' type='nominal' />
+            <column caption='Dependents' datatype='string' name='[dependents]' role='dimension' type='nominal' />
+            <column caption='Full Months Of Tenure' datatype='integer' name='[full_months_of_tenure]' role='measure' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column caption='Has Churned' datatype='boolean' name='[has_churned]' role='dimension' type='nominal' />
+            <column caption='Has Internet' datatype='boolean' name='[has_internet]' role='dimension' type='nominal' />
+            <column caption='Has Phone' datatype='boolean' name='[has_phone]' role='dimension' type='nominal' />
+            <column caption='Has Phone And Internet' datatype='boolean' name='[has_phone_and_internet]' role='dimension' type='nominal' />
+            <column caption='Internet Service' datatype='integer' name='[internet_service]' role='measure' type='quantitative' />
+            <column-instance column='[Set 1]' derivation='InOut' name='[io:Set 1:nk]' pivot='key' type='nominal' />
+            <column caption='Is Female' datatype='boolean' name='[is_female]' role='dimension' type='nominal' />
+            <column caption='Is Senior Citizen' datatype='string' name='[is_senior_citizen]' role='dimension' type='nominal' />
+            <column caption='Monthly Charges' datatype='real' name='[monthly_charges]' role='measure' type='quantitative' />
+            <column-instance column='[4. Validation]' derivation='None' name='[none:4. Validation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DeviceProtection]' derivation='None' name='[none:DeviceProtection:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OnlineBackup]' derivation='None' name='[none:OnlineBackup:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OnlineSecurity]' derivation='None' name='[none:OnlineSecurity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PaperlessBilling]' derivation='None' name='[none:PaperlessBilling:nk]' pivot='key' type='nominal' />
+            <column-instance column='[PaymentMethod]' derivation='None' name='[none:PaymentMethod:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StreamingMovies]' derivation='None' name='[none:StreamingMovies:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StreamingTV]' derivation='None' name='[none:StreamingTV:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TechSupport]' derivation='None' name='[none:TechSupport:nk]' pivot='key' type='nominal' />
+            <column-instance column='[binned_tenure]' derivation='None' name='[none:binned_tenure:nk]' pivot='key' type='nominal' />
+            <column-instance column='[churn]' derivation='None' name='[none:churn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[customer_id]' derivation='None' name='[none:customer_id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[dependents]' derivation='None' name='[none:dependents:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[has_churned]' derivation='None' name='[none:has_churned:nk]' pivot='key' type='nominal' />
+            <column-instance column='[has_internet]' derivation='None' name='[none:has_internet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[has_phone]' derivation='None' name='[none:has_phone:nk]' pivot='key' type='nominal' />
+            <column-instance column='[has_phone_and_internet]' derivation='None' name='[none:has_phone_and_internet:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_female]' derivation='None' name='[none:is_female:nk]' pivot='key' type='nominal' />
+            <column-instance column='[is_senior_citizen]' derivation='None' name='[none:is_senior_citizen:nk]' pivot='key' type='nominal' />
+            <column-instance column='[partner]' derivation='None' name='[none:partner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[partner_dependents]' derivation='None' name='[none:partner_dependents:nk]' pivot='key' type='nominal' />
+            <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[serv_type]' derivation='None' name='[none:serv_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_contract]' derivation='None' name='[none:type_of_contract:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_internet_serv]' derivation='None' name='[none:type_of_internet_serv:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_phone_serv]' derivation='None' name='[none:type_of_phone_serv:nk]' pivot='key' type='nominal' />
+            <column caption='Partner' datatype='string' name='[partner]' role='dimension' type='nominal' />
+            <column caption='Partner Dependents' datatype='string' name='[partner_dependents]' role='dimension' type='nominal' />
+            <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+            <column caption='Phone Service' datatype='integer' name='[phone_service]' role='measure' type='quantitative' />
+            <column caption='Serv Type' datatype='string' name='[serv_type]' role='dimension' type='nominal' />
+            <column-instance column='[Start_Date]' derivation='Sum' name='[sum:Start_Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Tenure (mo)]' derivation='Sum' name='[sum:Tenure (mo):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[average_monthly_charges]' derivation='Sum' name='[sum:average_monthly_charges:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[contract_type]' derivation='Sum' name='[sum:contract_type:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[full_months_of_tenure]' derivation='Sum' name='[sum:full_months_of_tenure:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[internet_service]' derivation='Sum' name='[sum:internet_service:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[monthly_charges]' derivation='Sum' name='[sum:monthly_charges:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[phone_service]' derivation='Sum' name='[sum:phone_service:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_charges]' derivation='Sum' name='[sum:total_charges:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Charges' datatype='real' name='[total_charges]' role='measure' type='quantitative' />
+            <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
+            <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
+            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:average_monthly_charges:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:contract_type:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:full_months_of_tenure:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:internet_service:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:monthly_charges:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:phone_service:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Start_Date:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Tenure (mo):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:total_charges:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[__tableau_internal_object_id__].[cnt:mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>(([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:4. Validation:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:binned_tenure:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:churn:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:customer_id:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:dependents:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:DeviceProtection:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[io:Set 1:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:gender:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_internet:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_phone:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_phone_and_internet:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:is_female:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:is_senior_citizen:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:OnlineBackup:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:OnlineSecurity:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:PaperlessBilling:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:partner:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:partner_dependents:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:PaymentMethod:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:payment_type:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:serv_type:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:StreamingMovies:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:StreamingTV:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:TechSupport:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_contract:nk] / ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk] / [federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]))))))))))))))))))))))))))) * ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:average_monthly_charges:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:contract_type:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:full_months_of_tenure:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:internet_service:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:monthly_charges:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:phone_service:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Start_Date:qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:Tenure (mo):qk] + ([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[sum:total_charges:qk] + [federated.081vzbf18fnfqb1eqhjmd17kv5rf].[__tableau_internal_object_id__].[cnt:mytable!values!only_DDCD3ECDCC1049A9BD7B96630BA7CFF4:qk]))))))))))</cols>
+      </table>
+      <simple-id uuid='{6D560EED-ED40-4AB5-B3ED-25FE6755DA0D}' />
     </worksheet>
     <worksheet name='Sheet 4'>
       <table>
@@ -1774,7 +2407,11 @@
             </column-instance>
             <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
             <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
-            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal' />
+            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+              </aliases>
+            </column>
           </datasource-dependencies>
           <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]'>
             <groupfilter function='member' level='[none:has_churned:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
@@ -1818,6 +2455,13 @@
       <simple-id uuid='{34CA9CAE-0EE5-4028-834A-E256D360942D}' />
     </worksheet>
     <worksheet name='Total Customer Churn by Service (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Futura'>Why are Fiber Customers Leaving in Droves?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -1834,7 +2478,11 @@
             </column-instance>
             <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
             <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
-            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal' />
+            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+              </aliases>
+            </column>
           </datasource-dependencies>
           <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]'>
             <groupfilter function='member' level='[none:has_churned:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
@@ -1846,13 +2494,39 @@
               <groupfilter function='member' level='[none:type_of_contract:nk]' member='&quot;Month-to-Month&quot;' />
             </groupfilter>
           </filter>
+          <manual-sort column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;No Phone Service&quot;</bucket>
+              <bucket>&quot;One Line&quot;</bucket>
+              <bucket>&quot;Two or More Lines&quot;</bucket>
+            </dictionary>
+          </manual-sort>
           <slices>
             <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_contract:nk]</column>
             <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' value='67' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' value='true' />
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='body-type' id='annotation_0' value='none' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
@@ -1868,14 +2542,215 @@
                 <format attr='mark-labels-mode' value='highlight' />
                 <format attr='mark-labels-show' value='true' />
               </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
             </style>
           </pane>
         </panes>
         <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</rows>
         <cols>([federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk] / [federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk])</cols>
         <percentages enabled='true' mode='table' />
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-84'>
+            <formatted-text>
+              <run fontcolor='#901363' fontname='Futura' fontsize='14'>69%</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.492537'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Fiber Optic&quot;</bucket>
+                      <bucket>&quot;One Line&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.43918539325842698'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.925373'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;No Internet Service&quot;</bucket>
+                      <bucket>&quot;One Line&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.39834470304975922'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.182927' y='0.727273' />
+          </annotation>
+        </annotations>
       </table>
       <simple-id uuid='{DD146A8B-D99C-4A32-9E5A-DB536B13C0A2}' />
+    </worksheet>
+    <worksheet name='Total Customer Churn by Service (3)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Futura'>Why are Fiber Customers Leaving in Droves?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mytable_values_only+ (telco_valuesonly)' name='federated.081vzbf18fnfqb1eqhjmd17kv5rf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.081vzbf18fnfqb1eqhjmd17kv5rf'>
+            <column caption='Has Churned' datatype='boolean' name='[has_churned]' role='dimension' type='nominal' />
+            <column-instance column='[has_churned]' derivation='None' name='[none:has_churned:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_contract]' derivation='None' name='[none:type_of_contract:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_internet_serv]' derivation='None' name='[none:type_of_internet_serv:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type_of_phone_serv]' derivation='None' name='[none:type_of_phone_serv:nk]' pivot='key' type='nominal' />
+            <column-instance column='[has_churned]' derivation='Count' name='[pcto:cnt:has_churned:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Field' type='PctTotal'>
+                <order field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' />
+                <order field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' />
+              </table-calc>
+            </column-instance>
+            <column-instance column='[has_churned]' derivation='Count' name='[pcto:cnt:has_churned:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Table' type='PctTotal' />
+            </column-instance>
+            <column caption='Type Of Contract' datatype='string' name='[type_of_contract]' role='dimension' type='nominal' />
+            <column caption='Type Of Internet Serv' datatype='string' name='[type_of_internet_serv]' role='dimension' type='nominal' />
+            <column caption='Type Of Phone Serv' datatype='string' name='[type_of_phone_serv]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Two or More Lines&quot;' value='Multi-Lines' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]'>
+            <groupfilter function='member' level='[none:has_churned:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_contract:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:type_of_contract:nk]' member='&quot;1 Year&quot;' />
+              <groupfilter function='member' level='[none:type_of_contract:nk]' member='&quot;2 Year&quot;' />
+              <groupfilter function='member' level='[none:type_of_contract:nk]' member='&quot;Month-to-Month&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;No Phone Service&quot;</bucket>
+              <bucket>&quot;One Line&quot;</bucket>
+              <bucket>&quot;Two or More Lines&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_contract:nk]</column>
+            <column>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:has_churned:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' value='true' />
+            <format attr='display' field='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#00000000' />
+            <format attr='body-type' id='annotation_0' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk:1]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]</rows>
+        <cols>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]</cols>
+        <percentages enabled='true' mode='table' />
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-84'>
+            <formatted-text>
+              <run fontcolor='#901363' fontname='Futura' fontsize='14'>69%</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.492537'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Fiber Optic&quot;</bucket>
+                      <bucket>&quot;One Line&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.43918539325842698'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.925373'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]</field>
+                      <field>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;No Internet Service&quot;</bucket>
+                      <bucket>&quot;One Line&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.39834470304975922'>
+                  <node-reference>
+                    <axis>[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[pcto:cnt:has_churned:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.182927' y='0.727273' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{EEBBBA68-A040-4129-8004-CBFD6F5D27F9}' />
     </worksheet>
   </worksheets>
   <dashboards>
@@ -1904,8 +2779,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='8' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='vert' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='22' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='21' param='vert' w='84000' x='8000' y='8000'>
                 <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' fixed-size='280' h='98000' id='3' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/agomez/Codeup/codeup-data-science/tableau/Telco_after_img.jpg' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -1932,43 +2807,34 @@
       <style />
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
-        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='65800' x='800' y='1000'>
-              <zone h='98000' id='3' name='Current vs Predicted (2)' w='65800' x='800' y='1000'>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-            </zone>
-            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='326' h='98000' id='6' is-fixed='true' param='vert' w='32600' x='66600' y='1000'>
-              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='8250' id='8' name='Current vs Predicted (2)' pane-specification-id='2' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:F1:nk]' w='32600' x='66600' y='1000'>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-            </zone>
-          </zone>
-          <zone-style>
-            <format attr='border-color' value='#000000' />
-            <format attr='border-style' value='none' />
-            <format attr='border-width' value='0' />
-            <format attr='margin' value='8' />
-          </zone-style>
-        </zone>
+        <zone h='78000' id='14' name='Current vs Predicted (2)' w='45400' x='2500' y='3125' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='7250' id='19' name='Current vs Predicted (2)' pane-specification-id='2' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:F1:nk]' show-title='false' w='14600' x='33100' y='12000' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='1' param='vert' w='84000' x='8000' y='8000' />
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='31' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='30' param='vert' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='78000' id='14' is-fixed='true' name='Current vs Predicted (2)' w='45400' x='2500' y='3125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='7250' id='19' name='Current vs Predicted (2)' pane-specification-id='2' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:F1:nk]' show-title='false' w='14600' x='33100' y='12000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -1981,32 +2847,93 @@
       </devicelayouts>
       <simple-id uuid='{EA3B70C0-E937-4B68-870E-FEB51569405B}' />
     </dashboard>
-    <dashboard name='Story 1' type='storyboard'>
+    <dashboard name='Dashboard 3'>
       <style />
-      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
-        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98340' id='1' param='vert' removable='false' w='98426' x='787' y='830'>
-            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='3423' id='3' w='98426' x='787' y='830' />
-            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='4253' />
-            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='84440' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='14730'>
-              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
-                <story-points>
-                  <story-point caption='Title page' captured-sheet='' id='1' />
-                  <story-point captured-sheet='' id='2' />
-                </story-points>
-              </flipboard>
-            </zone>
-          </zone>
-          <zone-style>
-            <format attr='border-color' value='#000000' />
-            <format attr='border-style' value='none' />
-            <format attr='border-width' value='0' />
-            <format attr='margin' value='8' />
-          </zone-style>
-        </zone>
+        <zone h='72375' id='3' name='Total Customer Churn by Service (2)' w='61600' x='3300' y='4125' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='9750' id='8' name='Total Customer Churn by Service (2)' pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' w='14000' x='9700' y='9375' />
       </zones>
-      <simple-id uuid='{C69BA36B-ACE8-4598-BC5D-EBE866B7C19F}' />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='16' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='15' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='72375' id='3' is-fixed='true' name='Total Customer Churn by Service (2)' w='61600' x='3300' y='4125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='9750' id='8' name='Total Customer Churn by Service (2)' pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' w='14000' x='9700' y='9375'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{ED3AFEEA-7E00-4153-9C2F-FCAEE978DC27}' />
+    </dashboard>
+    <dashboard name='Dashboard 4'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='66250' id='5' name='Current Month to Month Fiber Customer Churn' w='68100' x='3300' y='4125' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='7250' id='10' name='Current Month to Month Fiber Customer Churn' pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' w='14000' x='55900' y='12250' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='16' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='15' param='vert' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='66250' id='5' is-fixed='true' name='Current Month to Month Fiber Customer Churn' w='68100' x='3300' y='4125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='7250' id='10' name='Current Month to Month Fiber Customer Churn' pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' w='14000' x='55900' y='12250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F4B8B607-81D4-40CA-92C8-7AD3CD0CA87C}' />
     </dashboard>
     <dashboard name='Story 2' type='storyboard'>
       <style />
@@ -2017,9 +2944,10 @@
             <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='3423' id='3' w='98426' x='787' y='830' />
             <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='4253' />
             <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='84440' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='14730'>
-              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
                 <story-points>
-                  <story-point captured-sheet='' id='1' />
+                  <story-point captured-sheet='Current Month to Month Fiber Customer Churn' id='1' />
+                  <story-point captured-sheet='Total Customer Churn by Service (2)' id='2' />
                 </story-points>
               </flipboard>
             </zone>
@@ -2064,70 +2992,9 @@
       </cards>
       <simple-id uuid='{014FBBD8-4CC5-4A7F-86E3-D40BCB0C8FDA}' />
     </window>
-    <window class='worksheet' name='Total Customer Churn by Service (2)'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{43F75340-2B10-4513-8E14-1E1C3E32AA1C}' />
-    </window>
-    <window class='worksheet' name='Current Month to Month Fiber Customer Churn'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{E755F9FA-E5F0-4AA7-BA09-10E7E3FD5236}' />
-    </window>
-    <window class='dashboard' name='Story 1'>
-      <viewpoints />
-      <active id='5' />
-      <simple-id uuid='{9DFBBB78-A174-48D4-BF4D-4C9D445D6BEA}' />
-    </window>
     <window class='dashboard' name='Dashboard 1'>
       <viewpoints />
-      <active id='4' />
+      <active id='-1' />
       <simple-id uuid='{FC5C4F43-5F3F-401D-B5B1-A5E65881D700}' />
     </window>
     <window class='worksheet' name='Sheet 4'>
@@ -2214,7 +3081,7 @@
       </cards>
       <simple-id uuid='{135768C2-9080-4A7C-B288-30B0D3BEE6B7}' />
     </window>
-    <window class='worksheet' maximized='true' name='Current vs Predicted (3)'>
+    <window class='worksheet' name='Current vs Predicted (3)'>
       <cards>
         <edge name='left'>
           <strip size='276'>
@@ -2241,6 +3108,132 @@
         </edge>
       </cards>
       <simple-id uuid='{E214D106-F99D-4BB3-98C9-475147F4932A}' />
+    </window>
+    <window class='worksheet' name='Sheet 4 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='276'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E02B9E48-29E7-47E7-B736-3F06FE670BEC}' />
+    </window>
+    <window class='worksheet' name='Total Customer Churn by Service (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_internet_serv:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{43F75340-2B10-4513-8E14-1E1C3E32AA1C}' />
+    </window>
+    <window class='worksheet' name='Total Customer Churn by Service (3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8BC7A44B-4110-42D8-89A2-A4072A90F450}' />
+    </window>
+    <window class='worksheet' name='Current Month to Month Fiber Customer Churn'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.081vzbf18fnfqb1eqhjmd17kv5rf].[none:type_of_phone_serv:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E755F9FA-E5F0-4AA7-BA09-10E7E3FD5236}' />
+    </window>
+    <window class='worksheet' name='Current Month to Month Fiber Customer Churn (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AB8F50D0-3BC9-4E62-9A89-6486EFB94A94}' />
     </window>
     <window class='worksheet' name='Current vs Predicted (2)'>
       <cards>
@@ -2270,14 +3263,13 @@
       </cards>
       <simple-id uuid='{2353A565-541D-4C1F-BA13-336651458331}' />
     </window>
-    <window class='worksheet' name='Sheet 4 (2)'>
+    <window class='worksheet' name='Current vs Predicted (4)'>
       <cards>
         <edge name='left'>
           <strip size='276'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
-            <card type='measures' />
           </strip>
         </edge>
         <edge name='top'>
@@ -2292,11 +3284,11 @@
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{E02B9E48-29E7-47E7-B736-3F06FE670BEC}' />
+      <simple-id uuid='{E53CEB3F-987C-4D36-8115-80D64D32002C}' />
     </window>
     <window class='dashboard' name='Story 2'>
       <viewpoints />
-      <active id='5' />
+      <active id='2' />
       <simple-id uuid='{EBC95EEC-9DC5-4BC7-A49B-E89297BF6E43}' />
     </window>
     <window class='dashboard' name='Dashboard 2'>
@@ -2307,6 +3299,47 @@
       </viewpoints>
       <active id='-1' />
       <simple-id uuid='{B3EA7372-746C-4F7C-816F-832A6F3994DC}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Total Customer Churn by Service (2)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{CB418774-05F1-4A48-9880-7744D558DF9B}' />
+    </window>
+    <window class='dashboard' name='Dashboard 4'>
+      <viewpoints>
+        <viewpoint name='Current Month to Month Fiber Customer Churn'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{A3D01237-DACC-4131-9C42-BE71E3B15A12}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{25A8C320-F03E-451A-B5C9-AAEBA429EE6B}' />
     </window>
   </windows>
 </workbook>
